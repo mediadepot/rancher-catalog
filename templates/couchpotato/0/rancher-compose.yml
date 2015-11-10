@@ -1,0 +1,4 @@
+couchpotato:
+ scale: 1
+.catalog:
+ uuid: couchpotato-0

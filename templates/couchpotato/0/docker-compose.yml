@@ -1,0 +1,9 @@
+couchpotato:
+  restart: always
+  image: timhaak/couchpotato
+  scale: 1
+  ports:
+   - "5050:5050"
+  volumes:
+  - /srv/apps/couchpotato/config:/config
+  - /srv/apps/couchpotato/data:/data
