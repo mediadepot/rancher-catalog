@@ -1,0 +1,4 @@
+name: Update Service
+description: Watches for updates to docker containers and updates them in them in the depot. 
+category: Utility
+version: 1.0
