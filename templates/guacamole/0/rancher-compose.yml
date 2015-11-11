@@ -1,0 +1,5 @@
+.catalog:
+  name: "guacamole"
+  version: "1.0"
+  description: "Guacamole"
+  uuid: guacamole-0
