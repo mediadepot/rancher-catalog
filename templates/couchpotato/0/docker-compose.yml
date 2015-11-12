@@ -1,9 +1,8 @@
-couchpotato:
+web:
   restart: always
-  image: timhaak/couchpotato
-  scale: 1
+  image: mediadepot/couchpotato
   ports:
-   - "5050:5050"
+   - "8081"
   volumes:
   - /srv/apps/couchpotato/config:/config
   - /srv/apps/couchpotato/data:/data

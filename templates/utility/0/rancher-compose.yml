@@ -1,0 +1,9 @@
+.catalog:
+  name: "utility"
+  version: "1.0"
+  description: "Utility"
+  uuid: utility-0
+lb:
+  scale: 1
+  load_balancer_config:
+    name: lb config
