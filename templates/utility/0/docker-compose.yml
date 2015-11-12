@@ -7,7 +7,7 @@ lb:
   - 82:81
   # Listen on public port 9999 using TCP and not HTTP
   - 9999/tcp
-  links: 
+  # links:
   # Target services in the same stack will be listed as a link
   #  - web1:web1a
   #  - web2:web2a
