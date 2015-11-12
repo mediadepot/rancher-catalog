@@ -13,13 +13,13 @@ lb:
   #  - web2:web2a
   external_links:
   # Target services in a different stack will be listed as an external link
-  - guacamole/webserver:vpn
-  - couchpotato/
+  - guacamole/guacweb:guacweb
+  - couchpotato/couchpotato:couchpotato
   labels:
     # Put load balancer containers on hosts with label lb=true
-    io.rancher.scheduler.affinity:host_label: lb=true
+    # io.rancher.scheduler.affinity:host_label: lb=true
     # Requests to http://app.example.com/foo:80 should be routed to web1 over port 8000
     io.rancher.loadbalancer.target.couchpotato: couchpotato.depot.local:80=8081
     # Requests to http://app.example.com/foo should be routed to web2 over port 8000 
     # and http://app.example.com/foo/bar over port 8001
-    io.rancher.loadbalancer.target.vpn: vpn.depot.local:80=8080
+    io.rancher.loadbalancer.target.guacweb: guacweb.depot.local:80=8080

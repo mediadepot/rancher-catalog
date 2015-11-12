@@ -1,4 +1,4 @@
-web:
+couchpotato:
   restart: always
   image: mediadepot/couchpotato
   ports:

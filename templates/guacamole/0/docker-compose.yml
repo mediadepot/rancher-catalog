@@ -2,7 +2,7 @@ guacd:
   image: mattgruter/guacamole-guacd
 db:
   image: mattgruter/guacamole-db
-webserver:
+guacweb:
   image: mattgruter/guacamole-webserver
   links:
     - guacd
