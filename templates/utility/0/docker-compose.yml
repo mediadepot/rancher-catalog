@@ -9,8 +9,8 @@ lb:
   - 9999/tcp
   links: 
   # Target services in the same stack will be listed as a link
-  - web1:web1a
-  - web2:web2a
+  #  - web1:web1a
+  #  - web2:web2a
   external_links:
   # Target services in a different stack will be listed as an external link
   - guacamole/webserver:vpn
