@@ -3,5 +3,5 @@
   version: "1.0"
   description: "Couchpotato"
   uuid: couchpotato-0
-web:
+couchpotato:
   scale: 1

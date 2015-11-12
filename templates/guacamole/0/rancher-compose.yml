@@ -3,7 +3,7 @@
   version: "1.0"
   description: "Guacamole"
   uuid: guacamole-0
-webserver:
+guacweb:
   scale: 1
 guacd:
   scale: 1
