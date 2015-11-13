@@ -1,0 +1,9 @@
+.catalog:
+  name: "deluge"
+  version: "1.0"
+  description: "Deluge"
+  uuid: deluge-0
+app:
+  scale: 1
+data:
+  scale: 1
