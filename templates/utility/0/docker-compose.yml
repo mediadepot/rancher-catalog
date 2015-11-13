@@ -7,8 +7,8 @@ lb:
   # Target services in the same stack will be listed as a link
   #  - web1:web1a
   #  - web2:web2a
-  external_links:
-  # Target services in a different stack will be listed as an external link
+#  external_links:
+#  # Target services in a different stack will be listed as an external link
 #  - btsync/app:btsync
 #  - couchpotato/app:couchpotato
 #  - deluge/app:deluge
@@ -18,10 +18,10 @@ lb:
 #  - plex/app:plex
 #  - sickrage/app:sickrage
 #  - syncthing/app:syncthing
-  labels:
-    # Put load balancer containers on hosts with label lb=true
-    # io.rancher.scheduler.affinity:host_label: lb=true
-    # Requests to http://app.example.com/foo:80 should be routed to web1 over port 8000
+#  labels:
+#    # Put load balancer containers on hosts with label lb=true
+#    # io.rancher.scheduler.affinity:host_label: lb=true
+#    # Requests to http://app.example.com/foo:80 should be routed to web1 over port 8000
 #    io.rancher.loadbalancer.target.btsync/app: btsync.depot.local=8081
 #    io.rancher.loadbalancer.target.couchpotato/app: couchpotato.depot.local=8081
 #    io.rancher.loadbalancer.target.guacamole/guacweb: vpn.depot.local=8080
