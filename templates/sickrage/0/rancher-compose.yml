@@ -5,7 +5,5 @@
   uuid: sickrage-0
 app:
   scale: 1
-  labels:
-    lb_link: sickrage.depot.local=8081
 data:
   scale: 1
