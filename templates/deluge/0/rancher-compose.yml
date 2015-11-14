@@ -5,5 +5,7 @@
   uuid: deluge-0
 app:
   scale: 1
+  label:
+    lb_link: deluge.depot.local=8081
 data:
   scale: 1

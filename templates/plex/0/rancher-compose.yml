@@ -5,5 +5,7 @@
   uuid: plex-0
 app:
   scale: 1
+  label:
+    lb_link: plex.depot.local=32400
 data:
   scale: 1
