@@ -9,3 +9,4 @@ guacd:
   scale: 1
 db:
   scale: 1
+  tty: true

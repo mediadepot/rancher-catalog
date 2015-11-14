@@ -18,8 +18,8 @@ lb:
 #  - plex/app:plex
 #  - sickrage/app:sickrage
 #  - syncthing/app:syncthing
-#  labels:
-#    io.rancher.service.selector.link: lb_link
+  labels:
+    io.rancher.service.selector.link: lb_link
 #    # Put load balancer containers on hosts with label lb=true
 #    # io.rancher.scheduler.affinity:host_label: lb=true
 #    # Requests to http://app.example.com/foo:80 should be routed to web1 over port 8000
