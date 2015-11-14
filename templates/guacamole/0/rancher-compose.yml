@@ -5,7 +5,7 @@
   uuid: guacamole-0
 guacweb:
   scale: 1
-  label:
+  labels:
     lb_link: vpn.depot.local=8080
 guacd:
   scale: 1

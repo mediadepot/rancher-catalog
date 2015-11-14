@@ -5,7 +5,7 @@
   uuid: couchpotato-0
 app:
   scale: 1
-  label:
+  labels:
     lb_link: couchpotato.depot.local=8081
 data:
   scale: 1
