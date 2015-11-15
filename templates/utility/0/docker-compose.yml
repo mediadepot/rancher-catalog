@@ -35,3 +35,5 @@ events:
   image: mediadepot/rancher-events:master
   labels:
     io.rancher.service.selector.link: depot.lb.link
+  volumes:
+  - /var/run/docker.sock:/var/run/docker.sock
