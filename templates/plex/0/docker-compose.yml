@@ -11,7 +11,7 @@ app:
   - /mnt/samba/music:/mnt/music
   labels:
     io.rancher.sidekicks: data
-    lb_link: true
+    depot.lb.link: true
 data:
   image: tianon/true
   volumes:
