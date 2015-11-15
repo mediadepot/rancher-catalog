@@ -7,3 +7,5 @@ lb:
   scale: 1
   load_balancer_config:
     name: lb config
+events:
+  scale: 1

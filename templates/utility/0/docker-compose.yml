@@ -31,3 +31,7 @@ lb:
 #    io.rancher.loadbalancer.target.plex/app: plex.depot.local=32400
 #    io.rancher.loadbalancer.target.sickrage/app: sickrage.depot.local=8081
 #    io.rancher.loadbalancer.target.syncthing/app: plex.depot.local=8081
+events:
+  image: mediadepot/rancher-events
+  labels:
+    io.rancher.service.selector.link: depot.lb.link
