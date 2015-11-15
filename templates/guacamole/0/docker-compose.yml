@@ -9,3 +9,5 @@ guacweb:
     - db
   ports:
     - "8080"
+  labels:
+    lb_link: true

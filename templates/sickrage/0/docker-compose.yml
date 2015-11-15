@@ -11,6 +11,7 @@ app:
   - /mnt/samba/blackhole/[Tvshows]:/mnt/blackhole
   labels:
     io.rancher.sidekicks: data
+    lb_link: true
 data:
   image: tianon/true
   volumes:
