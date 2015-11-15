@@ -5,6 +5,8 @@
   uuid: sickrage-0
 app:
   scale: 1
+  labels:
+    lb_link: true
 data:
   scale: 1
   tty: true
