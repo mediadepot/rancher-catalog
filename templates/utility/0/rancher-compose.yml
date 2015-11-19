@@ -3,6 +3,19 @@
   version: "1.0"
   description: "Utility"
   uuid: utility-0
+  questions:
+    - variable: "RANCHER_API_KEY"
+      description: "The api key used to link services to load balancer"
+      label: "Rancher API Key"
+      required: true
+      default: ""
+      type: "string"
+    - variable: "RANCHER_API_SECRET"
+      description: "The api secret"
+      label: "Rancher API Secret"
+      required: true
+      default: ""
+      type: "string"
 lb:
   scale: 1
   load_balancer_config:
