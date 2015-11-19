@@ -11,10 +11,11 @@ app:
   - /mnt/samba/blackhole/[Movies]:/mnt/blackhole
   labels:
     io.rancher.sidekicks: data
-    io.rancher.container.start_once: true
     depot.lb.link: true
 data:
   image: tianon/true
+  labels:
+    io.rancher.container.start_once: true
   volumes:
   - /srv/couchpotato/config
   - /srv/couchpotato/data

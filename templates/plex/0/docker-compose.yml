@@ -11,10 +11,11 @@ app:
   - /mnt/samba/music:/mnt/music
   labels:
     io.rancher.sidekicks: data
-    io.rancher.container.start_once: true
     depot.lb.link: true
 data:
   image: tianon/true
+  labels:
+    io.rancher.container.start_once: true
   volumes:
   - /srv/plex/config
   - /srv/plex/data
