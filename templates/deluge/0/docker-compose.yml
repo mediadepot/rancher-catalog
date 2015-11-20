@@ -13,6 +13,9 @@ app:
   labels:
     io.rancher.sidekicks: data
     depot.lb.link: true
+  environment:
+    DEPOT_USER: ${DEPOT_USER}
+    DEPOT_PASSWORD: ${DEPOT_PASSWORD}
 data:
   image: tianon/true
   labels:
