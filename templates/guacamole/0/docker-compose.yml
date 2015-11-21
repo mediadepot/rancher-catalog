@@ -11,3 +11,4 @@ guacweb:
     - "8080"
   labels:
     depot.lb.link: true
+    depot.lb.port: 8080

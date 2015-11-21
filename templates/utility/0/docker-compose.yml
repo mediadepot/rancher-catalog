@@ -38,3 +38,5 @@ events:
     io.rancher.container.pull_image: always
   volumes:
   - /var/run/docker.sock:/var/run/docker.sock
+  env_file:
+  - /srv/secrets/depot_rancher_file.env
