@@ -43,3 +43,4 @@ events:
     RANCHER_API_KEY:
     RANCHER_API_SECRET:
     DEPOT_DOMAIN:
+  domainname: $DEPOT_DOMAIN
