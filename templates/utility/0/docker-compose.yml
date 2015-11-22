@@ -38,3 +38,8 @@ events:
     io.rancher.container.pull_image: always
   volumes:
   - /var/run/docker.sock:/var/run/docker.sock
+  environment:
+    RANCHER_MANAGER_HOSTNAME:
+    RANCHER_API_KEY:
+    RANCHER_API_SECRET:
+    DEPOT_DOMAIN:
