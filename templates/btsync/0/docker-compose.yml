@@ -19,7 +19,7 @@ app:
     DEPOT_USER: ${DEPOT_USER}
     DEPOT_PASSWORD: ${DEPOT_PASSWORD}
 data:
-  image: mediadepot/btsync:master
+  image: tianon/true
   labels:
     io.rancher.container.start_once: true
   volumes:
