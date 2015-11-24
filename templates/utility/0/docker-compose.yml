@@ -2,7 +2,7 @@ lb:
   image: rancher/load-balancer-service
   ports:
   # Listen on public port 80 and direct traffic to private port 80 of the service
-  - 50001:80
+  - 80:8081
   # links:
   # Target services in the same stack will be listed as a link
   #  - web1:web1a
