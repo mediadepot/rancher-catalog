@@ -17,6 +17,8 @@ app:
   environment:
     DEPOT_USER: ${DEPOT_USER}
     DEPOT_PASSWORD: ${DEPOT_PASSWORD}
+    DEPOT_PASSWORD_SALT:
+    PUSHOVER_USER_KEY:
 data:
   image: tianon/true
   labels:

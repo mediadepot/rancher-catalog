@@ -18,8 +18,6 @@ app:
   environment:
     DEPOT_USER: ${DEPOT_USER}
     DEPOT_PASSWORD: ${DEPOT_PASSWORD}
-    COUCHPOTATO_API_KEY:
-    PUSHOVER_USER_KEY: 
 data:
   image: tianon/true
   labels:
