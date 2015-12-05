@@ -2,7 +2,7 @@ lb:
   image: rancher/load-balancer-service
   ports:
   # Listen on public port 80 and direct traffic to private port 80 of the service
-  - 80:8081
+  - $RANCHER_MANAGER_LOADBALANCER_PORT:8081
   # links:
   # Target services in the same stack will be listed as a link
   #  - web1:web1a
@@ -40,6 +40,7 @@ events:
   - /var/run/docker.sock:/var/run/docker.sock
   environment:
     RANCHER_MANAGER_HOSTNAME:
+    RANCHER_MANAGER_LOADBALANCER_PORT:
     RANCHER_API_KEY:
     RANCHER_API_SECRET:
     DEPOT_DOMAIN:
