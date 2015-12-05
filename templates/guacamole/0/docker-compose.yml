@@ -1,9 +1,9 @@
 guacd:
-  image: mattgruter/guacamole-guacd
+  image: mediadepot/guacamole-guacd
 db:
-  image: mattgruter/guacamole-db
+  image: mediadepot/guacamole-db
 guacweb:
-  image: mattgruter/guacamole-webserver
+  image: mediadepot/guacamole-webserver
   links:
     - guacd
     - db
@@ -12,3 +12,13 @@ guacweb:
   labels:
     depot.lb.link: true
     depot.lb.port: 8080
+  environment:
+    DEPOT_USER: ${DEPOT_USER}
+    DEPOT_PASSWORD: ${DEPOT_PASSWORD}
+    DEPOT_HOST:
+data:
+  image: tianon/true
+  labels:
+    io.rancher.container.start_once: true
+  volumes:
+  - /srv/guacamole/config
