@@ -1,17 +1,17 @@
 guacd:
-  image: mediadepot/guacamole-guacd
+  image: mattgruter/guacamole-guacd
 db:
-  image: mediadepot/guacamole-db
+  image: mattgruter/guacamole-db
 guacweb:
   image: mediadepot/guacamole-webserver
   links:
     - guacd
     - db
   ports:
-    - "8080"
+    - "8081"
   labels:
     depot.lb.link: true
-    depot.lb.port: 8080
+    depot.lb.port: 8081
   environment:
     DEPOT_USER: ${DEPOT_USER}
     DEPOT_PASSWORD: ${DEPOT_PASSWORD}
