@@ -8,10 +8,10 @@ guacweb:
     - guacd
     - db
   ports:
-    - "8081"
+    - "8080"
   labels:
     depot.lb.link: true
-    depot.lb.port: 8081
+    depot.lb.port: 8080
   environment:
     DEPOT_USER: ${DEPOT_USER}
     DEPOT_PASSWORD: ${DEPOT_PASSWORD}
