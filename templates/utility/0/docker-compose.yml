@@ -36,12 +36,11 @@ events:
   labels:
     io.rancher.service.selector.link: depot.lb.link
     io.rancher.container.pull_image: always
+    io.rancher.container.create_agent: true
+    io.rancher.container.agent.role: environment
   volumes:
   - /var/run/docker.sock:/var/run/docker.sock
   environment:
-    RANCHER_MANAGER_HOSTNAME:
     RANCHER_MANAGER_LOADBALANCER_PORT:
-    RANCHER_API_KEY:
-    RANCHER_API_SECRET:
     DEPOT_DOMAIN:
   domainname: $DEPOT_DOMAIN
