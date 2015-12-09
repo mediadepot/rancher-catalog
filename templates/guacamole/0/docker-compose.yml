@@ -9,9 +9,6 @@ guacweb:
   labels:
     depot.lb.link: true
     depot.lb.port: 8080
-  environment:
-    DEPOT_USER: ${DEPOT_USER}
-    DEPOT_PASSWORD: ${DEPOT_PASSWORD}
 data:
   image: tianon/true
   labels:

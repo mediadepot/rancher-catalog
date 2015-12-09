@@ -13,11 +13,6 @@ app:
     io.rancher.sidekicks: data
     depot.lb.link: true
     depot.lb.port: 8080
-  environment:
-    DEPOT_USER: ${DEPOT_USER}
-    DEPOT_PASSWORD: ${DEPOT_PASSWORD}
-    HEADPHONES_API_KEY:
-    PUSHOVER_USER_KEY:
 data:
   image: tianon/true
   labels:
