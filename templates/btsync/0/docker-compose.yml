@@ -2,7 +2,7 @@ app:
   restart: always
   image: mediadepot/btsync:master
   ports:
-   - "8081"
+   - "8080"
    - "55555:55555"
   volumes_from:
   - data
@@ -14,7 +14,7 @@ app:
   labels:
     io.rancher.sidekicks: data
     depot.lb.link: true
-    depot.lb.port: 8081
+    depot.lb.port: 8080
   environment:
     DEPOT_USER: ${DEPOT_USER}
     DEPOT_PASSWORD: ${DEPOT_PASSWORD}
