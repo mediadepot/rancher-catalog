@@ -1,36 +1,12 @@
 lb:
   image: rancher/load-balancer-service
   ports:
-  # Listen on public port $RANCHER_LOADBALANCER_PORT and direct traffic to private port 8080/8081 of the service
-  - $RANCHER_LOADBALANCER_PORT:8081
-  # links:
-  # Target services in the same stack will be listed as a link
-  #  - web1:web1a
-  #  - web2:web2a
-#  external_links:
-#  # Target services in a different stack will be listed as an external link
-#  - btsync/app:btsync
-#  - couchpotato/app:couchpotato
-#  - deluge/app:deluge
-#  - guacamole/guacweb:guacweb
-#  - headphones/app:headphones
-#  - lazylibrarian/app:lazylibrarian
-#  - plex/app:plex
-#  - sickrage/app:sickrage
-#  - syncthing/app:syncthing
+  # Listen on public port 80 and direct traffic to private port 8080 of the service
+  # This doesnt really matter actually because the events container will map custom domains to each
+  # application
+  - 80:8080
   labels:
     io.rancher.service.selector.link: depot.lb.link
-#    # Put load balancer containers on hosts with label lb=true
-#    # io.rancher.scheduler.affinity:host_label: lb=true
-#    # Requests to http://app.example.com/foo:80 should be routed to web1 over port 8000
-#    io.rancher.loadbalancer.target.btsync/app: btsync.depot.local=8081
-#    io.rancher.loadbalancer.target.couchpotato/app: couchpotato.depot.local=8081
-#    io.rancher.loadbalancer.target.guacamole/guacweb: vpn.depot.local=8080
-#    io.rancher.loadbalancer.target.headphones/app: headphones.depot.local=8081
-#    io.rancher.loadbalancer.target.lazylibrarian/app: lazylibrarian.depot.local=8081
-#    io.rancher.loadbalancer.target.plex/app: plex.depot.local=32400
-#    io.rancher.loadbalancer.target.sickrage/app: sickrage.depot.local=8081
-#    io.rancher.loadbalancer.target.syncthing/app: plex.depot.local=8081
 events:
   image: mediadepot/rancher-events:master
   labels:
@@ -38,8 +14,3 @@ events:
     io.rancher.container.pull_image: always
     io.rancher.container.create_agent: true
     io.rancher.container.agent.role: environment
-  volumes:
-  - /var/run/docker.sock:/var/run/docker.sock
-  environment:
-    RANCHER_LOADBALANCER_PORT:
-    DEPOT_DOMAIN:
