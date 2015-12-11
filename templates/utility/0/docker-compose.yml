@@ -4,7 +4,7 @@ lb:
   # Listen on public port 80 and direct traffic to private port 8080 of the service
   # This doesnt really matter actually because the events container will map custom domains to each
   # application
-  - 80:8080
+  - $RANCHER_LOADBALANCER_PORT:8080
   labels:
     io.rancher.service.selector.link: depot.lb.link
 events:
