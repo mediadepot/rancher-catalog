@@ -12,6 +12,7 @@ app:
     io.rancher.sidekicks: data
     depot.lb.link: true
     depot.lb.port: 943
+    depot.app.type: openvpnas
 data:
   image: tianon/true
   labels:

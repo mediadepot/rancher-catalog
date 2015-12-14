@@ -13,6 +13,7 @@ app:
     io.rancher.sidekicks: data
     depot.lb.link: true
     depot.lb.port: 8080
+    depot.app.type: sickrage
 data:
   image: tianon/true
   labels:

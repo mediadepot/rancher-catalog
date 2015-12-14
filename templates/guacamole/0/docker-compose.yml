@@ -9,6 +9,7 @@ guacweb:
   labels:
     depot.lb.link: true
     depot.lb.port: 8080
+    depot.app.type: guacamole
 data:
   image: tianon/true
   labels:
