@@ -9,6 +9,8 @@ lb:
   - $RANCHER_LOADBALANCER_HTTPS_PORT:943
   labels:
     io.rancher.service.selector.link: depot.lb.link
+    io.rancher.loadbalancer.ssl.ports: $RANCHER_LOADBALANCER_HTTPS_PORT
+
 events:
   image: mediadepot/rancher-events:master
   labels:
