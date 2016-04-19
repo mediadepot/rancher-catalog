@@ -14,12 +14,16 @@ lb:
 
 manager:
   image: rancher/external-service
+  depends_on:
+    - events
   labels:
     depot.lb.link: true
     depot.lb.port: $RANCHER_MANAGER_PORT
     depot.app.type: manager
 events:
   image: mediadepot/rancher-events:master
+  depends_on:
+    - lb
   labels:
     io.rancher.service.selector.link: depot.lb.link
     io.rancher.container.pull_image: always
