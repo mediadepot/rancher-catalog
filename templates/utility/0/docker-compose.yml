@@ -12,6 +12,12 @@ lb:
 # TODO: removing LOADBALANCER_HTTPS_PORT for now because it makes all changes to the LB require a certificate. ugh.
 #    io.rancher.loadbalancer.ssl.ports: $RANCHER_LOADBALANCER_HTTPS_PORT
 
+manager:
+  image: rancher/external-service
+  labels:
+    depot.lb.link: true
+    depot.lb.port: $RANCHER_MANAGER_PORT
+    depot.app.type: manager
 events:
   image: mediadepot/rancher-events:master
   labels:
