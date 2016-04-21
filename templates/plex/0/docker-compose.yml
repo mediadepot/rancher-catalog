@@ -6,9 +6,9 @@ app:
   volumes_from:
   - data
   volumes:
-  - /mnt/samba/tvshows:/mnt/tvshows
-  - /mnt/samba/movies:/mnt/movies
-  - /mnt/samba/music:/mnt/music
+  - /media/storage/tvshows:/mnt/tvshows
+  - /media/storage/movies:/mnt/movies
+  - /media/storage/music:/mnt/music
   labels:
     io.rancher.sidekicks: data
     depot.lb.link: true

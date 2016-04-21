@@ -6,9 +6,9 @@ app:
   volumes_from:
   - data
   volumes:
-  - /mnt/samba/ebooks:/mnt/ebooks
-  - /mnt/samba/downloads/[Ebooks]:/mnt/downloads
-  - /mnt/samba/blackhole/[Ebooks]:/mnt/blackhole
+  - /media/storage/ebooks:/mnt/ebooks
+  - /media/storage/downloads/[Ebooks]:/mnt/downloads
+  - /media/temp/blackhole/[Ebooks]:/mnt/blackhole
   labels:
     io.rancher.sidekicks: data
     depot.lb.link: true
