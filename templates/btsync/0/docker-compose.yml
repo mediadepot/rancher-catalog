@@ -7,9 +7,11 @@ app:
   volumes_from:
   - data
   volumes:
-  - /media/storage/tvshows:/mnt/tvshows
-  - /media/storage/movies:/mnt/movies
-  - /media/storage/music:/mnt/music
+  - /media/storage/[Tvshows]:/mnt/tvshows
+  - /media/storage/[Movies]:/mnt/movies
+  - /media/storage/[Music]:/mnt/music
+  - /media/storage/[Photos]:/mnt/photos
+  - /media/storage/[Ebooks]:/mnt/ebooks
   - /media/temp/blackhole:/mnt/blackhole
   labels:
     io.rancher.sidekicks: data

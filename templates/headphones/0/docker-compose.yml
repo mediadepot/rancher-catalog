@@ -6,7 +6,7 @@ app:
   volumes_from:
   - data
   volumes:
-  - /media/storage/music:/mnt/music
+  - /media/storage/[Music]:/mnt/music
   - /media/storage/downloads/[Music]:/mnt/downloads
   - /media/temp/blackhole/[Music]:/mnt/blackhole
   labels:

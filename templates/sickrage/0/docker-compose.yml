@@ -6,7 +6,7 @@ app:
   volumes_from:
   - data
   volumes:
-  - /media/storage/tvshows:/mnt/tvshows
+  - /media/storage/[Tvshows]:/mnt/tvshows
   - /media/storage/downloads/[Tvshows]:/mnt/downloads
   - /media/temp/blackhole/[Tvshows]:/mnt/blackhole
   labels:

@@ -6,7 +6,7 @@ app:
   volumes_from:
   - data
   volumes:
-  - /media/storage/ebooks:/mnt/ebooks
+  - /media/storage/[Ebooks]:/mnt/ebooks
   - /media/storage/downloads/[Ebooks]:/mnt/downloads
   - /media/temp/blackhole/[Ebooks]:/mnt/blackhole
   labels:
