@@ -2,6 +2,8 @@ lb:
   image: rancher/load-balancer-service
   depends_on:
     - manager
+  links:
+    - manager
   ports:
   # Listen on public port 80 and direct traffic to private port 8080 of the service
   # Listen on public port 443 and direct traffic to private port 943 of the service
