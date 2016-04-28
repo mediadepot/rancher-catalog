@@ -1,7 +1,5 @@
 lb:
   image: rancher/load-balancer-service
-  links:
-    - manager:manager
   ports:
   # Listen on public port 80 and direct traffic to private port 8080 of the service
   # Listen on public port 443 and direct traffic to private port 943 of the service
@@ -11,13 +9,14 @@ lb:
   - $RANCHER_LOADBALANCER_HTTPS_PORT:943
   labels:
     io.rancher.service.selector.link: depot.lb.link
-    io.rancher.loadbalancer.target.manager: manager.$DEPOT_DOMAIN:$RANCHER_LOADBALANCER_HTTP_PORT=$RANCHER_MANAGER_PORT
 
 # TODO: removing LOADBALANCER_HTTPS_PORT for now because it makes all changes to the LB require a certificate. ugh.
 #    io.rancher.loadbalancer.ssl.ports: $RANCHER_LOADBALANCER_HTTPS_PORT
 
 manager:
   image: rancher/external-service
+  depends_on:
+    - events
   labels:
     depot.lb.link: true
     depot.lb.port: $RANCHER_MANAGER_PORT
