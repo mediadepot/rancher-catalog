@@ -2,7 +2,7 @@ app:
   restart: always
   image: mediadepot/sickrage:master
   ports:
-   - "8080"
+   - "8081"
   volumes_from:
   - data
   volumes:
@@ -12,7 +12,7 @@ app:
   labels:
     io.rancher.sidekicks: data
     depot.lb.link: true
-    depot.lb.port: 8080
+    depot.lb.port: 8081
     depot.app.type: sickrage
 data:
   image: tianon/true

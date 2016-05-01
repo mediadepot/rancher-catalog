@@ -2,7 +2,7 @@ app:
   restart: always
   image: mediadepot/lazylibrarian:master
   ports:
-   - "8080"
+   - "5299"
   volumes_from:
   - data
   volumes:
@@ -12,7 +12,7 @@ app:
   labels:
     io.rancher.sidekicks: data
     depot.lb.link: true
-    depot.lb.port: 8080
+    depot.lb.port: 5299
     depot.app.type: lazylibrarian
 data:
   image: tianon/true
