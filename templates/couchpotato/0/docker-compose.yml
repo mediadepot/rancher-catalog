@@ -6,9 +6,9 @@ app:
   volumes_from:
   - data
   volumes:
-  - /media/storage/[Movies]:/mnt/movies
-  - /media/storage/downloads/[Movies]:/mnt/downloads
-  - /media/temp/blackhole/[Movies]:/mnt/blackhole
+  - /media/storage/movies:/mnt/movies
+  - /media/storage/downloads/movies:/mnt/downloads
+  - /media/temp/blackhole/movies:/mnt/blackhole
   labels:
     io.rancher.sidekicks: data
     depot.lb.link: true
