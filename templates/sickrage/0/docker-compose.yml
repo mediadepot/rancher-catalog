@@ -9,6 +9,7 @@ app:
   - /media/storage/tvshows:/mnt/tvshows
   - /media/storage/downloads/tvshows:/mnt/downloads
   - /media/temp/blackhole/tvshows:/mnt/blackhole
+  - /etc/localtime:/etc/localtime:ro
   labels:
     io.rancher.sidekicks: data
     depot.lb.link: true
