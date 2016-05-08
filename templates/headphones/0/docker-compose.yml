@@ -12,7 +12,7 @@ app:
   labels:
     io.rancher.sidekicks: data
     depot.lb.link: true
-    depot.lb.port: 8081
+    depot.lb.port: 8181
     depot.app.type: headphones
 data:
   image: tianon/true
