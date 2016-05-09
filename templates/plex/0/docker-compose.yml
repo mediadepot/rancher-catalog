@@ -2,7 +2,10 @@ app:
   restart: always
   image: mediadepot/plex:master
   ports:
-   - "32400"
+   - "32400:32400"
+  network_mode: "host"
+  cap_drop:
+    - NET_ADMIN
   volumes_from:
   - data
   volumes:
