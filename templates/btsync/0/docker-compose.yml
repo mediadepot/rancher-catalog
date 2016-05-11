@@ -18,6 +18,9 @@ app:
     depot.lb.link: true
     depot.lb.port: 8888
     depot.app.type: btsync
+  environment:
+    - DEPOT_USER
+    - DEPOT_PASSWORD
 data:
   image: tianon/true
   labels:
