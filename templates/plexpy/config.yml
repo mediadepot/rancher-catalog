@@ -1,6 +1,6 @@
 name: PlexPy
 description: A Python based monitoring and tracking tool for Plex Media Server.
-category: Media
+category: Utility
 version: 1.0
 maintainer: Jason Kulatunga <jason@thesparktree.com>
 license: MIT
