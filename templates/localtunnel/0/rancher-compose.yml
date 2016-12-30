@@ -1,0 +1,19 @@
+.catalog:
+  name: "localtunnel"
+  version: "1.0"
+  description: "LocalTunnel"
+  uuid: localtunnel-0
+  questions:
+    - variable: "EXTERNAL_SERVICE"
+      description: "The Rancher service that you would like to expose externally"
+      label: "Rancher External Service"
+      required: true
+      type: "service"
+    - variable: "EXTERNAL_SERVICE_PORT"
+      description: "The Rancher service port that you would like to expose externally"
+      label: "Rancher External Service Port"
+      required: true
+      type: "int"
+      default: 8181
+tunnel:
+  scale: 1

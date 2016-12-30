@@ -1,8 +1,8 @@
 .catalog:
-  name: "headohones"
+  name: "lazylibrarian"
   version: "1.0"
-  description: "Headphones"
-  uuid: headphones-0
+  description: "LazyLibrarian"
+  uuid: lazylibrarian-0
 app:
   scale: 1
 data:

@@ -1,0 +1,7 @@
+name: PlexRequests
+description: Simple automated way for users to request new content for Plex
+category: Media
+version: 1.0
+maintainer: Jason Kulatunga <jason@thesparktree.com>
+license: MIT
+projectURL: https://github.com/lokenx/plexrequests-meteor
