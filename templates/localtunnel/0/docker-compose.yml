@@ -1,5 +1,6 @@
 tunnel:
   restart: always
   image: efrecon/localtunnel
-  command:
-    --local-host $EXTERNAL_SERVICE --port $EXTERNAL_SERVICE_PORT
+  external_links:
+    - $EXTERNAL_SERVICE:external
+  command: --local-host external --port $EXTERNAL_SERVICE_PORT
