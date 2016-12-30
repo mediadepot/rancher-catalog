@@ -1,6 +1,6 @@
 app:
   restart: always
-  image: mediadepot/plexpy:master
+  image: mediadepot/plexpy:latest
   ports:
    - "8181"
   volumes_from:
