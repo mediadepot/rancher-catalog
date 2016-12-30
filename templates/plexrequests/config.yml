@@ -1,6 +1,6 @@
 name: Plex Requests
 description: Simple automated way for users to request new content for Plex
-category: Media
+category: Organize
 version: 1.0
 maintainer: Jason Kulatunga <jason@thesparktree.com>
 license: MIT
