@@ -9,7 +9,7 @@ app:
     io.rancher.sidekicks: data
     depot.lb.link: true
     depot.lb.port: 3000
-    depot.app.type: plexpy
+    depot.app.type: plexrequests
 data:
   image: tianon/true
   labels:
