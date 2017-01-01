@@ -15,5 +15,28 @@
       required: true
       type: "int"
       default: 8181
+    - variable: "CLOUDFLARE_DOMAIN"
+      description: "The cloudflare domain to expose the service on"
+      label: "Cloudflare Domain"
+      required: true
+      type: "string"
+      default: "example.com"
+    - variable: "CLOUDFLARE_DOMAIN_PREFIX"
+      description: "The cloudflare domain prefix to expose the service on"
+      label: "Cloudflare Domain Prefix"
+      required: true
+      type: "string"
+      default: "servicename"
+    - variable: "CLOUDFLARE_EMAIL"
+      description: "The cloudflare account email address"
+      label: "Cloudflare Account Email"
+      required: true
+      type: "string"
+      default: "user@example.com"
+    - variable: "CLOUDFLARE_KEY"
+      description: "The cloudflare account api key"
+      label: "Cloudflare Account Api Key"
+      required: true
+      type: "password"
 tunnel:
   scale: 1
