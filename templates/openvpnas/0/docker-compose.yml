@@ -8,6 +8,7 @@ app:
   volumes_from:
   - data
   labels:
+    io.rancher.container.pull_image: always
     io.rancher.service.selector.link: depot.lb.link
     io.rancher.sidekicks: data
     depot.lb.link: true

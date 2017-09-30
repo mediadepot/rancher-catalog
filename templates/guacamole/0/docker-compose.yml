@@ -9,6 +9,7 @@ services:
     ports:
       - "8080"
     labels:
+      io.rancher.container.pull_image: always
       depot.lb.link: true
       depot.app.type: guacamole
     volumes:

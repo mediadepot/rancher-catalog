@@ -16,6 +16,7 @@ services:
     - /media/storage/music:/mnt/music
     - ${CONFIG_DIRECTORY}:/srv/plex/config
     labels:
+      io.rancher.container.pull_image: always
       io.rancher.sidekicks: data
       depot.lb.link: true
       depot.app.type: plex

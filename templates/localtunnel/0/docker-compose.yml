@@ -12,3 +12,5 @@ services:
       - CLOUDFLARE_KEY=$CLOUDFLARE_KEY
     external_links:
       - $EXTERNAL_SERVICE:external
+    labels:
+      io.rancher.container.pull_image: always

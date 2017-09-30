@@ -13,6 +13,7 @@ services:
     - /media/temp/blackhole/movies:/mnt/blackhole
     - ${CONFIG_DIRECTORY}:/srv/couchpotato/config
     labels:
+      io.rancher.container.pull_image: always
       io.rancher.sidekicks: data
       depot.lb.link: true
       depot.app.type: couchpotato

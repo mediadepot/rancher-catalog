@@ -13,6 +13,7 @@ services:
     - /media/temp/blackhole/music:/mnt/blackhole
     - ${CONFIG_DIRECTORY}:/srv/headphones/config
     labels:
+      io.rancher.container.pull_image: always
       io.rancher.sidekicks: data
       depot.lb.link: true
       depot.app.type: headphones

@@ -15,6 +15,7 @@ services:
     - ${CONFIG_DIRECTORY}:/srv/sickrage/config
 
     labels:
+      io.rancher.container.pull_image: always
       io.rancher.sidekicks: data
       depot.lb.link: true
       depot.app.type: sickrage
