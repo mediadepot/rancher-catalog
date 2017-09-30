@@ -11,6 +11,12 @@ catalog:
       required: true
       default: "sickrage.depot.lan"
       type: "string"
+    - variable: "CONFIG_DIRECTORY"
+      description: "The configuration directory for this app"
+      label: "Configuration directory"
+      required: true
+      default: "/srv/apps/sickrage"
+      type: "string"
 services:
   app:
     scale: 1

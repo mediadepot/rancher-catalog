@@ -25,7 +25,7 @@ services:
         priority: 3
         protocol: http
         selector:  loadbalancer=stats
-        source_port: 50001
+        source_port: 6668
         target_port: 6668
       - source_port: 80
         # Target any service that has foo=bar as a label

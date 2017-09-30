@@ -1,9 +1,28 @@
-.catalog:
+version: '2'
+catalog:
   name: "lazylibrarian"
   version: "1.0"
   description: "LazyLibrarian"
   uuid: lazylibrarian-0
-app:
-  scale: 1
-data:
-  scale: 1
+  questions:
+    - variable: "APP_HOSTNAME"
+      description: "The public hostname for this app"
+      label: "LazyLibrarian load balancer hostname"
+      required: true
+      default: "lazylibrarian.depot.lan"
+      type: "string"
+    - variable: "CONFIG_DIRECTORY"
+      description: "The configuration directory for this app"
+      label: "Configuration directory"
+      required: true
+      default: "/srv/apps/lazylibrarian"
+      type: "string"
+services:
+  app:
+    scale: 1
+    lb_config:
+      port_rules:
+      - target_port: 5299
+        hostname: $APP_HOSTNAME
+  data:
+    scale: 1

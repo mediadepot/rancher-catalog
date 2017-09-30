@@ -12,6 +12,8 @@ services:
     - /media/storage/downloads/tvshows:/mnt/downloads
     - /media/temp/blackhole/tvshows:/mnt/blackhole
     - /etc/localtime:/etc/localtime:ro
+    - ${CONFIG_DIRECTORY}:/srv/sickrage/config
+
     labels:
       io.rancher.sidekicks: data
       depot.lb.link: true
@@ -21,5 +23,4 @@ services:
     labels:
       io.rancher.container.start_once: true
     volumes:
-    - /srv/sickrage/config
     - /srv/sickrage/data
