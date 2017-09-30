@@ -1,10 +1,16 @@
-.catalog:
+version: '2'
+catalog:
   name: "sickrage"
   version: "1.0"
   description: "Sickrage"
   uuid: sickrage-0
-app:
-  scale: 1
-data:
-  scale: 1
-  tty: true
+services:
+  app:
+    scale: 1
+    lb_config:
+      port_rules:
+      - target_port: 8081
+        hostname: sickrage.$DEPOT_DOMAIN
+  data:
+    scale: 1
+    tty: true
