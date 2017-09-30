@@ -8,7 +8,6 @@ services:
     # This doesnt really matter actually because the events container will map custom domains to each
     # application
     - $RANCHER_LOADBALANCER_HTTP_PORT
-    - $RANCHER_LOADBALANCER_HTTPS_PORT
 #    labels:
 #      io.rancher.service.selector.link: depot.lb.link
 
@@ -17,10 +16,7 @@ services:
 
   manager:
     image: rancher/external-service
-    depends_on:
-      - events
     labels:
-      depot.lb.link: true
       depot.lb.port: $RANCHER_MANAGER_PORT
       depot.app.type: manager
 #  events:
