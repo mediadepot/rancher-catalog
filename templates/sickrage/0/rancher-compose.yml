@@ -4,13 +4,20 @@ catalog:
   version: "1.0"
   description: "Sickrage"
   uuid: sickrage-0
+  questions:
+    - variable: "APP_HOSTNAME"
+      description: "The public hostname for this app"
+      label: "Sickrage load balancer hostname"
+      required: true
+      default: "sickrage.depot.lan"
+      type: "string"
 services:
   app:
     scale: 1
     lb_config:
       port_rules:
       - target_port: 8081
-        hostname: sickrage.depot
+        hostname: $APP_HOSTNAME
   data:
     scale: 1
     tty: true
