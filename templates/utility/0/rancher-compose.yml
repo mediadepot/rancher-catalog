@@ -1,4 +1,5 @@
-.catalog:
+version: '2'
+catalog:
   name: "utility"
   version: "1.0"
   description: "Utility"
@@ -10,13 +11,14 @@
       required: true
       default: "80"
       type: "string"
-lb:
-  scale: 1
-  load_balancer_config:
-    name: lb config
-manager:
-  scale: 1
-  external_ips:
-    - $DEPOT_HOST
-events:
-  scale: 1
+services:
+  lb:
+    scale: 1
+    load_balancer_config:
+      name: lb config
+  manager:
+    scale: 1
+    external_ips:
+      - $DEPOT_HOST
+  events:
+    scale: 1
