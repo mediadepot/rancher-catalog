@@ -5,7 +5,15 @@ services:
     image: mediadepot/deluge:master
     ports:
      - "8081"
-     - "6881-6891"
+     - "6881"
+     - "6882"
+     - "6883"
+     - "6884"
+     - "6885"
+     - "6886"
+     - "6887"
+     - "6888"
+     - "6889"
     volumes_from:
     - data
     volumes:
