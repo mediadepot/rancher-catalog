@@ -5,7 +5,7 @@ services:
     image: mediadepot/plex:master
     ports:
      - "32400:32400"
-    net: "host"
+    network_mode: "host"
     cap_drop:
       - NET_ADMIN
     volumes_from:
