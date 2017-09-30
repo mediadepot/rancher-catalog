@@ -17,6 +17,7 @@ services:
   manager:
     image: rancher/external-service
     labels:
+      depot.lb.link: true
       depot.lb.port: $RANCHER_MANAGER_PORT
       depot.app.type: manager
 #  events:
