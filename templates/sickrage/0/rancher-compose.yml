@@ -10,7 +10,7 @@ services:
     lb_config:
       port_rules:
       - target_port: 8081
-        hostname: sickrage.$DEPOT_DOMAIN
+        hostname: sickrage.depot
   data:
     scale: 1
     tty: true

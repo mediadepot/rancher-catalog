@@ -14,8 +14,19 @@ catalog:
 services:
   lb:
     scale: 1
+    start_on_create: true
     lb_config:
       port_rules:
+
+      # add support for retriving stats from loadbalancer on port 6668
+      # https://github.com/rancher/rancher/issues/8464
+      - backend_name: stats
+        path: /stats
+        priority: 3
+        protocol: http
+        selector:  loadbalancer=stats
+        source_port: 6668
+        target_port: 6668
       - source_port: 80
         # Target any service that has foo=bar as a label
         selector: depot.lb.link=true
