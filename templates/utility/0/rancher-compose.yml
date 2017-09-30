@@ -14,11 +14,23 @@ catalog:
 services:
   lb:
     scale: 1
-    load_balancer_config:
-      name: lb config
+    lb_config:
+      port_rules:
+      - source_port: 80
+        # Target any service that has foo=bar as a label
+        selector: depot.lb.link
+        protocol: http
+    health_check:
+      port: 42
+      interval: 2000
+      unhealthy_threshold: 3
+      healthy_threshold: 2
+      response_timeout: 2000
   manager:
     scale: 1
+    lb_config:
+      port_rules:
+      - target_port: 8080
+        hostname: utility.$DEPOT_DOMAIN
     external_ips:
       - $DEPOT_HOST
-  events:
-    scale: 1
