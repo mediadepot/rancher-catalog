@@ -3,7 +3,7 @@ catalog:
   name: "rtorrent"
   version: "1.0"
   description: "rTorrent and Flood"
-  uuid: deluge-0
+  uuid: rtorrent-0
   questions:
     - variable: "DEPOT_USER"
       description: "The username to login to the application with"
@@ -19,7 +19,7 @@ catalog:
       type: "string"
     - variable: "APP_HOSTNAME"
       description: "The public hostname for this app"
-      label: "Deluge load balancer hostname"
+      label: "Rtorrent load balancer hostname"
       required: true
       default: "rtorrent.depot.lan"
       type: "string"
