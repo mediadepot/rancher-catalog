@@ -2,7 +2,7 @@ version: '2'
 services:
   app:
     restart: always
-    image: mediadepot/rtorrent:latest
+    image: mediadepot/rtorrent:master
     ports:
      - "8081"
      - "6881"
