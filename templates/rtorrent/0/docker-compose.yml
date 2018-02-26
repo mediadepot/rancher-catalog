@@ -5,6 +5,7 @@ services:
     image: mediadepot/rtorrent:master
     ports:
      - "8081"
+     - "6880"
      - "6881"
      - "6882"
      - "6883"
@@ -29,6 +30,7 @@ services:
     environment:
       DEPOT_USER: ${DEPOT_USER}
       DEPOT_PASSWORD: ${DEPOT_PASSWORD}
+    network_mode: "host"
   data:
     image: tianon/true
     labels:
