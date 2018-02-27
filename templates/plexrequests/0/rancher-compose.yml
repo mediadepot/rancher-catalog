@@ -24,5 +24,3 @@ services:
       port_rules:
       - target_port: 3000
         hostname: $APP_HOSTNAME
-  data:
-    scale: 1
