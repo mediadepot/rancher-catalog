@@ -36,5 +36,11 @@ services:
       port_rules:
       - target_port: 8081
         hostname: $APP_HOSTNAME
+    health_check:
+      port: 8081
+      interval: 2000
+      unhealthy_threshold: 3
+      healthy_threshold: 2
+      response_timeout: 2000
   data:
     scale: 1
