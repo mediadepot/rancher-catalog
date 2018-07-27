@@ -6,8 +6,6 @@ services:
     ports:
      - "8888"
      - "55555:55555"
-    volumes_from:
-    - data
     volumes:
     - /media/storage/tvshows:/mnt/tvshows
     - /media/storage/movies:/mnt/movies
