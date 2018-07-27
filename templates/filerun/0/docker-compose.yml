@@ -15,15 +15,15 @@ services:
     ports:
      - "80"
     volumes:
-    - /media/storage/tvshows:/mnt/tvshows
-    - /media/storage/movies:/mnt/movies
-    - /media/storage/music:/mnt/music
-    - /media/storage/photos:/mnt/photos
-    - /media/storage/ebooks:/mnt/ebooks
-    - /media/temp/blackhole:/mnt/blackhole
-    - /media/temp/processing:/mnt/processing
-    - /media/storage/downloads:/mnt/downloads
-    - /media/storage/software:/mnt/software
+    - /media/storage/tvshows:/user-files/depot/tvshows
+    - /media/storage/movies:/user-files/depot/movies
+    - /media/storage/music:/user-files/depot/music
+    - /media/storage/photos:/user-files/depot/photos
+    - /media/storage/ebooks:/user-files/depot/ebooks
+    - /media/temp/blackhole:/user-files/depot/blackhole
+    - /media/temp/processing:/user-files/depot/processing
+    - /media/storage/downloads:/user-files/depot/downloads
+    - /media/storage/software:/user-files/depot/software
     - ${CONFIG_DIRECTORY}/html:/var/www/html
     labels:
       io.rancher.container.pull_image: always
