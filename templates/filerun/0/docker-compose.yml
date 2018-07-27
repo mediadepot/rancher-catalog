@@ -1,8 +1,17 @@
 version: '2'
 services:
+  db:
+    image: mariadb:10.1
+    environment:
+      MYSQL_ROOT_PASSWORD: filerunroot
+      MYSQL_USER: filerun
+      MYSQL_PASSWORD: filerun
+      MYSQL_DATABASE: filerun
+    volumes:
+      - ${CONFIG_DIRECTORY}/db:/var/lib/mysql
   app:
     restart: always
-    image: zaggash/docker-filerun
+    image: afian/filerun
     ports:
      - "80"
     volumes:
@@ -15,13 +24,22 @@ services:
     - /media/temp/processing:/mnt/processing
     - /media/storage/downloads:/mnt/downloads
     - /media/storage/software:/mnt/software
-    - ${CONFIG_DIRECTORY}:/config
+    - ${CONFIG_DIRECTORY}/html:/var/www/html
     labels:
       io.rancher.container.pull_image: always
       depot.lb.link: true
       depot.app.type: filerun
     environment:
+      - FR_DB_HOST=db
+      - FR_DB_PORT=3306
+      - FR_DB_NAME=filerun
+      - FR_DB_USER=filerun
+      - FR_DB_PASS=filerun
       - PUID=15000
       - PGID=15000
       - DEPOT_USER
       - DEPOT_PASSWORD
+    depends_on:
+      - db
+    links:
+      - db:db

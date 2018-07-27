@@ -30,3 +30,5 @@ services:
       unhealthy_threshold: 3
       healthy_threshold: 2
       response_timeout: 2000
+  db:
+    scale: 1
