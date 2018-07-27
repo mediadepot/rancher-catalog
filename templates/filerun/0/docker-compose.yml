@@ -11,7 +11,7 @@ services:
       - ${CONFIG_DIRECTORY}/db:/var/lib/mysql
   app:
     restart: always
-    image: afian/filerun
+    image: mediadepot/filerun:latest
     ports:
      - "80"
     volumes:
@@ -30,8 +30,6 @@ services:
       depot.lb.link: true
       depot.app.type: filerun
     environment:
-      - APACHE_RUN_USER=#15000
-      - APACHE_RUN_GROUP=#15000
       - FR_DB_HOST=db
       - FR_DB_PORT=3306
       - FR_DB_NAME=filerun
