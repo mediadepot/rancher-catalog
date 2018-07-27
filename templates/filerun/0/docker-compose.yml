@@ -5,8 +5,6 @@ services:
     image: zaggash/docker-filerun
     ports:
      - "80"
-    volumes_from:
-    - data
     volumes:
     - /media/storage/tvshows:/mnt/tvshows
     - /media/storage/movies:/mnt/movies

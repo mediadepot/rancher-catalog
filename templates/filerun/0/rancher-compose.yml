@@ -3,7 +3,7 @@ catalog:
   name: "filerun"
   version: "1.0"
   description: "Filerun"
-  uuid: resilio-0
+  uuid: filerun-0
   questions:
     - variable: "APP_HOSTNAME"
       description: "The public hostname for this app"
