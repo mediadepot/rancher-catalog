@@ -1,0 +1,32 @@
+version: '2'
+catalog:
+  name: "resilio"
+  version: "1.0"
+  description: "Resilio Sync"
+  uuid: resilio-0
+  questions:
+    - variable: "APP_HOSTNAME"
+      description: "The public hostname for this app"
+      label: "Resilio load balancer hostname"
+      required: true
+      default: "resilio.depot.lan"
+      type: "string"
+    - variable: "CONFIG_DIRECTORY"
+      description: "The configuration directory for this app"
+      label: "Configuration directory"
+      required: true
+      default: "/srv/apps/resilio"
+      type: "string"
+services:
+  app:
+    scale: 1
+    lb_config:
+      port_rules:
+      - target_port: 8888
+        hostname: $APP_HOSTNAME
+    health_check:
+      port: 8888
+      interval: 2000
+      unhealthy_threshold: 3
+      healthy_threshold: 2
+      response_timeout: 2000

@@ -1,0 +1,7 @@
+name: Filerun
+description: Access your files anywhere through self-hosted secure cloud storage, file backup and sharing for your photos, videos, files and more.
+category: Share
+version: 1.0
+maintainer: Jason Kulatunga <jason@thesparktree.com>
+license: MIT
+projectURL: https://github.com/zaggash/docker-filerun

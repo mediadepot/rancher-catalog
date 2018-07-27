@@ -1,0 +1,30 @@
+version: '2'
+services:
+  app:
+    restart: always
+    image: zaggash/docker-filerun
+    ports:
+     - "80"
+    volumes_from:
+    - data
+    volumes:
+    - /media/storage/tvshows:/mnt/tvshows
+    - /media/storage/movies:/mnt/movies
+    - /media/storage/music:/mnt/music
+    - /media/storage/photos:/mnt/photos
+    - /media/storage/ebooks:/mnt/ebooks
+    - /media/temp/blackhole:/mnt/blackhole
+    - /media/temp/processing:/mnt/processing
+    - /media/storage/downloads:/mnt/downloads
+    - /media/storage/software:/mnt/software
+    - ${CONFIG_DIRECTORY}:/config
+    labels:
+      io.rancher.container.pull_image: always
+      io.rancher.sidekicks: data
+      depot.lb.link: true
+      depot.app.type: filerun
+    environment:
+      - PUID=15000
+      - PGID=15000
+      - DEPOT_USER
+      - DEPOT_PASSWORD

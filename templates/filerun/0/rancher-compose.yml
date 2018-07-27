@@ -1,34 +1,32 @@
 version: '2'
 catalog:
-  name: "btsync"
+  name: "filerun"
   version: "1.0"
-  description: "Bittorrent Sync"
-  uuid: btsync-0
+  description: "Filerun"
+  uuid: resilio-0
   questions:
     - variable: "APP_HOSTNAME"
       description: "The public hostname for this app"
-      label: "BTSync load balancer hostname"
+      label: "Filerun load balancer hostname"
       required: true
-      default: "btsync.depot.lan"
+      default: "files.depot.lan"
       type: "string"
     - variable: "CONFIG_DIRECTORY"
       description: "The configuration directory for this app"
       label: "Configuration directory"
       required: true
-      default: "/srv/apps/btsync"
+      default: "/srv/apps/filerun"
       type: "string"
 services:
   app:
     scale: 1
     lb_config:
       port_rules:
-      - target_port: 8888
+      - target_port: 80
         hostname: $APP_HOSTNAME
     health_check:
-      port: 8888
+      port: 80
       interval: 2000
       unhealthy_threshold: 3
       healthy_threshold: 2
       response_timeout: 2000
-  data:
-    scale: 1
