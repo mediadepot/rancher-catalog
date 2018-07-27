@@ -11,7 +11,7 @@ services:
       - ${CONFIG_DIRECTORY}/db:/var/lib/mysql
   app:
     restart: always
-    image: mediadepot/filerun:latest
+    image: mediadepot/filerun:master
     ports:
      - "80"
     volumes:
