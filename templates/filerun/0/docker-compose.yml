@@ -30,13 +30,13 @@ services:
       depot.lb.link: true
       depot.app.type: filerun
     environment:
+      - APACHE_RUN_USER=#15000
+      - APACHE_RUN_GROUP=#15000
       - FR_DB_HOST=db
       - FR_DB_PORT=3306
       - FR_DB_NAME=filerun
       - FR_DB_USER=filerun
       - FR_DB_PASS=filerun
-      - PUID=15000
-      - PGID=15000
       - DEPOT_USER
       - DEPOT_PASSWORD
     depends_on:
