@@ -1,0 +1,35 @@
+version: '2'
+catalog:
+  name: "urlwatch"
+  version: "1.0"
+  description: "Urlwatch"
+  uuid: sickrage-0
+  questions:
+    - variable: "APP_HOSTNAME"
+      description: "The public hostname for this app"
+      label: "Urlwatch load balancer hostname"
+      required: true
+      default: "urlwatch.depot.lan"
+      type: "string"
+    - variable: "CONFIG_DIRECTORY"
+      description: "The configuration directory for this app"
+      label: "Configuration directory"
+      required: true
+      default: "/srv/apps/urlwatch"
+      type: "string"
+services:
+  app:
+    scale: 1
+    lb_config:
+      port_rules:
+      - target_port: 8081
+        hostname: $APP_HOSTNAME
+    health_check:
+      port: 8081
+      interval: 2000
+      unhealthy_threshold: 3
+      healthy_threshold: 2
+      response_timeout: 2000
+  data:
+    scale: 1
+    tty: true
