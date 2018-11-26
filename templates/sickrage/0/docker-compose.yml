@@ -6,12 +6,14 @@ services:
     ports:
      - "8081"
     volumes:
-    - /media/storage/tvshows:/mnt/tvshows
-    - /media/storage/downloads/tvshows:/mnt/downloads
-    - /media/temp/blackhole/tvshows:/mnt/blackhole
+    - /media/storage/tvshows:/tv
+    - /media/storage/downloads/tvshows:/downloads
+    - /media/temp/blackhole/tvshows:/blackhole
+    - ${CONFIG_DIRECTORY}:/config
     - /etc/localtime:/etc/localtime:ro
-    - ${CONFIG_DIRECTORY}:/srv/sickrage/config
-
+    environment:
+      PGID: 15000
+      PUID: 15000
     labels:
       io.rancher.container.pull_image: always
       depot.lb.link: true
