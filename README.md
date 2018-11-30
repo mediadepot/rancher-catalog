@@ -1,3 +1,6 @@
+# deprecated
+- Replaced by https://github.com/mediadepot/charts
+
 # rancher-catalog
 Repository to store rancher templates
 
